@@ -811,8 +811,8 @@ def write_input(args, value_args):
     # else:
     #     mult_value = value_args
 
-    print('!!!!!!!!!!!!!!!!!!!!!!!!')
-    print(mult_value)
+    # print('!!!!!!!!!!!!!!!!!!!!!!!!')
+    # print(mult_value)
 
     for i in range(len(args)):
         ii = 0
@@ -835,7 +835,7 @@ def write_input(args, value_args):
                 else:
                     # print(mult_value)
                     replace = str(*mult_value[i-2])
-                    print(replace)
+                    # print(replace)
                 cmd_write = 'sed -i -e "'+str(positions[i])+'s/.*/'+replace+'/g" temp.input'
                 # print(cmd_write)
                 os.system(cmd_write)
@@ -1315,7 +1315,7 @@ def main():
             bnds += Cmin_1_bnds
 
         guess1, temp_guess = initial_guess()
-        print('guess1 = '+str(guess1))
+        # print('guess1 = '+str(guess1))
 
         result = minimize(function, guess1, method='nelder-mead', bounds = bnds)
 
